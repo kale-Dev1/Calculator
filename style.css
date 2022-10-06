@@ -6,11 +6,6 @@ h1{
     font-size: 40px;
     font-style:  Andale Mono, monospace;
 }
-/* .wrapper{
-    display: block;
-     */
-    /* justify-content: center; */
-/* } */
 
 .grid-container {
     display: grid;
@@ -39,4 +34,5 @@ h1{
 p{
     text-align: center;
     color: rgb(56, 99, 135);
+    padding-top: 40px;
 }
