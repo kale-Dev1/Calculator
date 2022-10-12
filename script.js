@@ -26,6 +26,7 @@ keys.addEventListener('click', event =>{
 
   // Check if its a operator key
   if(type === 'operator'){
+    key.classList.add('selected');
     console.log(key)
     
 
