@@ -1,40 +1,49 @@
+
+
 body{
-    background-color: #DFF6FF;
+  background-color: #DFF6FF;
 }
 h1{
-    text-align: center;
-    font-size: 40px;
-    font-style:  Andale Mono, monospace;
+  text-align: center;
+  font-size: 40px;
+  font-style:  Andale Mono, monospace;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
-    max-width: 500px;
-    margin: auto;
-  }
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0;
+  border: none;
   
-  .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    height: 50px;
-   
-    padding: 20px 0;
-    font-size: 30px;
-    
-  }
+}
+
+.screen {
+  height: 70px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: rgba(255, 255, 255, 0.8);
+  max-height: 70px;
+  font-size: 30px;
+  padding: auto;
+  text-align: end;
   
-  .screen {
-    height: 30px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
+  
+
+}
 
 p{
-    text-align: center;
-    color: rgb(56, 99, 135);
-    padding-top: 40px;
+  text-align: center;
+  color: rgb(56, 99, 135);
+  padding-top: 40px;
 }
