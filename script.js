@@ -26,12 +26,41 @@ keys.addEventListener('click', event =>{
 
   // Check if its a operator key
   if(type === 'operator'){
-    key.classList.add('selected');
-    console.log(key)
+    const operatorKeys = keys.querySelectorAll('[data-type ="operator"]')
+    operatorKeys.forEach(item => {item.dataset.state = ''})
+    key.dataset.state = 'selected';
+    
+    keys.dataset.firstNumber = displayValue;
+    keys.dataset.operator = key.dataset.key
+  
+  }
+
+  if(type == 'equals'){
+    //Perform Calculation
+    const firstNumber = parseInt(keys.dataset.firstNumber);
+    const operator = keys.dataset.operator;
+    const secondNumber = parseInt(displayValue);
+    console.log(firstNumber, operator, secondNumber)
+
+    let result = '';
+
+    if(operator == '+'){
+      result = add(firstNumber, secondNumber)
+    }else if(operator == '-'){
+      result = subtract(firstNumber, secondNumber)
+    }else if(operator == '/'){
+      result = divide(firstNumber, secondNumber)
+    }else if(operator == 'x'){
+      result = multiply(firstNumber, secondNumber)
+    }
+
+    display.textContent = result;
+
+
+
+  }
     
 
-   
-  }
     
   if(key.classList.contains('clear')){
     location.reload();
@@ -40,3 +69,9 @@ keys.addEventListener('click', event =>{
   keys.dataset.previousKeyType = type;
    
 });
+
+const add = (a,b) => a+b; 
+const divide = (a,b) => a/b; 
+const subtract = (a,b) => a-b; 
+const multiply = (a,b) => a*b; 
+
