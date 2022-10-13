@@ -47,3 +47,6 @@ p{
   color: rgb(56, 99, 135);
   padding-top: 40px;
 }
+[data-state = "selected"]{
+  background-color: rgba(142, 170, 183, 0.8);
+}
